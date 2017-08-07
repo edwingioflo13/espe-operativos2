@@ -1,0 +1,33 @@
+extends layout
+
+block content
+  //ventana modal donde mostraremos los mensajes de error
+  #myModal.modal.fade(tabindex="-1",role="dialog",aria-labelledby="myModalLabel",aria-hidden="true")
+    .modal-header
+      h2.title-modal
+      hr
+      .modal-body
+        p.messageModal
+      .modal-footer
+        a.btn.btn-danger(data-dismiss="modal",aria-hidden="true") Cerrar
+  #login-form.well.span10.offset1                      
+    form.form-horizontal()#caja-login#loginSubmit.well.span9  
+      h1 UNIVERSIDAD DE LAS FUERZAS ARMADAS ESPE
+      h4.subheading Jose Arellano - Cristina Diaz - Edwin Flores - Kelly Landazuri
+      h4.subheading Inicia sesión con tu cuenta
+      hr
+      div.control-group
+        label.control-label(for='username') Nombre de usuario
+        div.controls
+          input(name="username",type="text",placeholder="Escribe un nombre de usuario",required).span3.username
+      div.control-group
+        label.control-label(for="password") Escribe un Password
+        div.controls
+          input(name="password",type="password",placeholder="Escribe un password",required).span3.password
+      div.control-group
+        hr
+        label.control-label(for="singlebutton")
+        div.controls
+          button.btn.btn-large.btn-block.btn-primary() 
+            i.icon-lock.icon-white
+            |  Iniciar sesión
